@@ -146,5 +146,16 @@ class TaskController extends Controller
 
     }
 
+<<<<<<< HEAD
 >>>>>>> a1d9264183634d087789acc3faa0955371def1c1
+=======
+    public function sort(Request $request)
+    {
+        $parameter = $request->sort;
+        $tasks = $this->taskService->all();
+        $collectionTasks = collect($tasks['data'])->sortBy($parameter);
+        return $collectionTasks;
+    }
+
+>>>>>>> b059e29818a6c5d77050d63c2efbe9ea08fca420
 }
